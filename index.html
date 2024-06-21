@@ -4,7 +4,375 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ARIA - Music</title>
-    <link rel="icon" type="image/icon" href="images/favicon.ico" />
+    <link rel="icon" type="image/icon" href="images/favicon-32x32.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pink_red: "hsl(340, 100%, 50%)",
+              wood_brown: "hsl(0, 15%, 29%)",
+              bright_brown: "hsl(0, 12%, 44%)",
+              pale_brown: "hsl(0, 16%, 69%)",
+              bright_pink: "hsl(336, 100%, 50%)",
+            },
+            fontFamily: {
+              Poppins: ["Poppins"],
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
   </head>
-  <body></body>
+  <body class="min-h-screen">
+    <nav class="p-7 md:flex md:items-center md:justify-between md:p-8">
+      <div class="flex items-center justify-between">
+        <span class="cursor-pointer">
+          <img src="images/Aria-logo.svg" alt="ARIA logo" class="w-[100px]" />
+        </span>
+        <span class="block text-3xl text-center cursor-pointer md:hidden"
+          ><ion-icon name="menu" onclick="Menu(this)"></ion-icon
+        ></span>
+      </div>
+      <ul
+        class="flex flex-col gap-3 font-medium bg-white font-Poppins md:flex-row md:items-center md:gap-14 md:z-auto md:static absolute md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
+      >
+        <li>
+          <a href="#" class="duration-500 cursor-pointer hover:text-pink_red"
+            >Premium</a
+          >
+        </li>
+        <li>
+          <a href="#" class="duration-500 cursor-pointer hover:text-pink_red"
+            >Support</a
+          >
+        </li>
+        <li>
+          <a href="#" class="duration-500 cursor-pointer hover:text-pink_red"
+            >Download</a
+          >
+        </li>
+        <li>
+          <a href="#" class="duration-500 cursor-pointer hover:text-pink_red"
+            >Profile</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div class="flex flex-col items-center justify-center gap-8 p-5 mt-20">
+      <img src="images/Aria-logo.svg" alt="ARIA logo" class="w-[260px]" />
+      <h1 class="text-3xl font-medium text-center font-Poppins">
+        A full music streaming platform
+      </h1>
+      <img src="images/ARIA-capsule.svg" alt="capsule" class="w-[55px] mt-10" />
+      <img
+        src="images/pattern-1.svg"
+        alt="girl listening to music"
+        class="w-[250px] absolute left-0 z-[-1] top-[500px] md:top-[300px]"
+      />
+      <img
+        src="images/pattern-2.svg"
+        alt="girl listening to music"
+        class="w-[250px] absolute right-0 bottom-[-200px] md:bottom-[200px]"
+      />
+    </div>
+    <div
+      class="w-full h-full bg-bright_brown mt-[40rem] md:mt-[15rem] p-8 flex flex-col gap-12 text-center"
+    >
+      <div
+        class="flex flex-col items-center gap-5 text-2xl font-medium justfy-center md:flex-row md:p-5 md:items-center md:gap-16"
+      >
+        <img
+          src="images/features-image-1.svg"
+          alt="guy playing guitar"
+          class="w-[200px]"
+        />
+        <p>
+          Release your full potential with
+          <span class="flex items-center justify-center"
+            ><img src="images/Aria-logo.svg" alt="ARIA logo" class="w-[100px]"
+          /></span>
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center gap-5 text-2xl font-medium justfy-center md:flex-row-reverse md:p-5 md:items-center md:gap-16 md:justify-normal"
+      >
+        <img
+          src="images/features-image-2.svg"
+          alt="girl voice acting"
+          class="w-[200px]"
+        />
+        <p>
+          Upload your <span class="text-pink_red">own music</span> and grow
+          faster as an
+          <span class="text-pink_red">artist</span>
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center gap-5 text-2xl font-medium justfy-center md:flex-row md:p-5 md:items-center md:gap-16"
+      >
+        <img
+          src="images/features-image-3.svg"
+          alt="girl sitting and scrolling on phone while listening to music"
+          class="w-[200px]"
+        />
+        <p>
+          Create your own infinite
+          <span class="text-pink_red">playlists</span> and enjoy exploring to
+          <span class="text-pink_red">different genres</span>
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center gap-5 text-2xl font-medium justfy-center md:flex-row-reverse md:p-5 md:items-center md:gap-16"
+      >
+        <img
+          src="images/features-image-4.svg"
+          alt="3 people singing "
+          class="w-[200px]"
+        />
+        <p>
+          Enjoy streaming music online with your friends with the
+          <span class="text-pink_red">Party Mode</span>
+        </p>
+      </div>
+      <div
+        class="flex flex-col items-center gap-5 text-2xl font-medium justfy-center md:flex-row md:p-5 md:items-center md:gap-16"
+      >
+        <img
+          src="images/features-image-5.svg"
+          alt="girl playing music from smart TV"
+          class="w-[200px]"
+        />
+        <p>
+          Continue streaming from any smart device with
+          <span class="text-pink_red">No Stop</span>
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col items-center justify-center gap-3">
+      <h1 class="text-4xl font-bold text-pink_red">Go premium!</h1>
+      <p class="font-medium">Choose your plan</p>
+    </div>
+
+    <div
+      class="flex flex-col items-center justify-center gap-3 mt-5 font-Poppins md:flex-row"
+    >
+      <div
+        class="flex flex-col font-Poppins items-center p-6 mt-10 font-medium bg-pale_brown w-[270px] h-[490px] border-black border-2 rounded-3xl"
+      >
+        <h1 class="text-3xl font-bold">
+          <span class="text-pink_red">ARIA</span> Free.
+        </h1>
+        <img
+          src="images/pricing-image-1.svg"
+          alt="girl studying on bed while listening to music"
+          class="w-[150px] mt-4"
+        />
+        <div
+          class="flex flex-col items-center justify-center mt-4 font-Poppins"
+        >
+          <p class="text-4xl">0 <span>$</span></p>
+          <p class="text-sm">Per month.</p>
+        </div>
+        <div class="flex flex-col mt-4 whitespace-nowrap">
+          <p>- No Ads.</p>
+          <p>- Only one user per account.</p>
+        </div>
+        <button
+          class="text-center bg-white rounded-xl w-[160px] cursor-pointer h-[30px] text-bright_pink mt-8 shadow-lg hover:transition-all hover:text-white hover:bg-bright_pink duration-300"
+        >
+          Your current plan
+        </button>
+      </div>
+      <div
+        class="flex flex-col font-Poppins items-center p-6 mt-10 font-medium bg-pale_brown w-[250px] h-[490px] border-black border-2 rounded-3xl"
+      >
+        <h1 class="text-3xl font-bold">
+          <span class="text-pink_red">ARIA</span> Go.
+        </h1>
+        <img
+          src="images/pricing-image-2.svg"
+          alt="girl floating while listening to music"
+          class="w-[140px] mt-4"
+        />
+        <div
+          class="flex flex-col items-center justify-center mt-4 font-Poppins"
+        >
+          <p class="text-4xl">15 <span>$</span></p>
+          <p class="text-sm">Per month.</p>
+        </div>
+        <div class="flex flex-col mt-4 whitespace-nowrap">
+          <p>- No Ads.</p>
+          <p>- 5 users per account.</p>
+        </div>
+        <button
+          class="text-center bg-white rounded-xl w-[160px] cursor-pointer h-[30px] text-bright_pink mt-8 shadow-lg hover:transition-all hover:text-white hover:bg-bright_pink duration-300"
+        >
+          Select plan
+        </button>
+      </div>
+      <div
+        class="flex flex-col font-Poppins items-center p-6 mt-10 font-medium bg-pale_brown w-[250px] h-[490px] border-black border-2 rounded-3xl"
+      >
+        <h1 class="text-3xl font-bold">
+          <span class="text-pink_red">ARIA</span> Go.
+        </h1>
+        <img
+          src="images/pricing-image-3.svg"
+          alt="girl floating while listening to music"
+          class="w-[220px] mt-4"
+        />
+        <div
+          class="flex flex-col items-center justify-center mt-6 font-Poppins"
+        >
+          <p class="text-4xl">30 <span>$</span></p>
+          <p class="text-sm">Per month.</p>
+        </div>
+        <div class="flex flex-col mt-4 whitespace-nowrap">
+          <p>- No Ads.</p>
+          <p>- Unlimited users per account.</p>
+        </div>
+        <button
+          class="text-center bg-white text-bright_pink rounded-xl w-[160px] cursor-pointer h-[30px] mt-[2.1rem] shadow-lg hover:transition-all hover:text-white hover:bg-bright_pink duration-300"
+        >
+          Select plan
+        </button>
+      </div>
+    </div>
+    <span class="flex flex-col items-center justify-center mt-5 mb-5">
+      <p class="font-medium font-Poppins">
+        Or get a
+        <span class="cursor-pointer text-bright_pink hover:underline"
+          >Student Discount</span
+        >
+      </p>
+    </span>
+
+    <footer class="h-full justfy-center bg-wood_brown font-Poppins">
+      <img
+        src="images/footer-pattern-1.svg"
+        alt="footer pattern"
+        class="w-[100px] absolute left-0"
+      />
+      <img
+        src="images/footer-pattern-2.svg"
+        alt="footer pattern"
+        class="w-[100px] absolute right-0"
+      />
+      <div
+        class="flex flex-col items-center justify-center gap-5 p-10 md:flex-row md:justify-around md:items-center"
+      >
+        <img
+          src="images/Aria-logo-white.svg"
+          alt="ARIA logo"
+          class="w-[140px]"
+        />
+        <div
+          class="flex items-center justify-center gap-3 mr-2 text-4xl cursor-pointer"
+        >
+          <ion-icon
+            name="logo-facebook"
+            class="duration-200 hover:text-bright_pink"
+          ></ion-icon>
+          <ion-icon
+            name="logo-instagram"
+            class="duration-200 hover:text-bright_pink"
+          ></ion-icon>
+          <ion-icon
+            name="logo-twitter"
+            class="duration-200 hover:text-bright_pink"
+          ></ion-icon>
+        </div>
+      </div>
+      <div
+        class="text-center md:text-left md:flex md:items-start md:justify-center md:gap-12"
+      >
+        <div>
+          <ul class="flex flex-col gap-2 font-medium text-white">
+            <li class="duration-75 cursor-pointer hover:text-pink_red">
+              Support
+            </li>
+            <li class="duration-75 cursor-pointer hover:text-pink_red">
+              Web player
+            </li>
+            <li class="duration-75 cursor-pointer hover:text-pink_red">
+              Download app
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="flex flex-col gap-2 font-medium text-white">
+            <li class="duration-75 cursor-pointer hover:text-pink_red">
+              About
+            </li>
+
+            <li class="duration-75 cursor-pointer hover:text-pink_red">
+              Advertising
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-5 md:flex md:flex-row md:justify-between">
+        <ul
+          class="flex items-center justify-center gap-4 p-5 text-white md:whitespace-nowrap md:flex md:gap-3 font-extralight"
+        >
+          <li class="duration-200 cursor-pointer hover:text-bright_pink">
+            Legal
+          </li>
+          <li class="duration-200 cursor-pointer hover:text-bright_pink">
+            Privacy Center
+          </li>
+          <li class="duration-200 cursor-pointer hover:text-bright_pink">
+            Privacy Policy
+          </li>
+          <li class="duration-200 cursor-pointer hover:text-bright_pink">
+            Cookies
+          </li>
+          <li class="duration-200 cursor-pointer hover:text-bright_pink">
+            About Ads
+          </li>
+        </ul>
+        <div
+          class="flex flex-col items-center justify-center md:items-end md:justify-end md:p-5"
+        >
+          <p class="font-thin text-center text-white">
+            Copyright © 2024 - All right reserved by ARIA
+          </p>
+          <p class="font-thin text-center text-white">
+            coded with 💘 by
+            <a
+              href="https://github.com/AbdullahHamadax"
+              class="cursor-pointer text-pink_red"
+              >Abdallah Hamada</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function Menu(e) {
+        let list = document.querySelector("ul");
+        e.name === "menu"
+          ? ((e.name = "close"),
+            list.classList.add("top-[80px]"),
+            list.classList.add("opacity-100"))
+          : ((e.name = "menu"),
+            list.classList.remove("top-[80px]"),
+            list.classList.remove("opacity-100"));
+      }
+    </script>
+  </body>
 </html>
