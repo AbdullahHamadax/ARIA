@@ -9,8 +9,8 @@ Welcome to ARIA - Music, a full-featured music streaming platform. This project 
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
+- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -31,6 +31,24 @@ Welcome to ARIA - Music, a full-featured music streaming platform. This project 
 - **JavaScript**
 - **Tailwind CSS**
 - **Ionicons**
+
+
+## Screenshots
+
+### Desktop View
+
+![Desktop Screenshot 1](Screenshots/image-1.png)
+![Desktop Screenshot 2](Screenshots/image-2.png)
+![Desktop Screenshot 3](Screenshots/image-3.png)
+![Desktop Screenshot 4](Screenshots/image-4.png)
+
+### Mobile View
+
+![Mobile Screenshot 1](Screenshots/image-5.png)
+![Mobile Screenshot 2](Screenshots/image-6.png)
+![Mobile Screenshot 3](Screenshots/image-7.png)
+![Mobile Screenshot 4](Screenshots/image-8.png)
+
 
 ## Getting Started
 
